@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+<main class="justify-center">
+  <div class="w-4/12">
+    <form action="/users/login" method="POST" class="">
+      <h2>Login With Your Details</h2>
+      <% if(error) {%>
+      <p class="text-red-400"><%=error %></p>
+      <% } %>
+      <input type="email" name="email" placeholder="Enter your email" />
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter your Password"
+      />
+      <input type="submit" class="submit" />
+      <div class="flex items-center mt-6">
+        <a href="/users/register/new" class=""> Register </a>
+
+        <a class="ml-4" href="/users/login/forgotpassword">forget password ?</a>
+      </div>
+    </form>
+  </div>
+</main>

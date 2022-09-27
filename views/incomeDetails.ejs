@@ -1,0 +1,18 @@
+<% include partials/header %>
+<main class="w-full h-screen flex justify-center items-center">
+  <div>
+    <section>
+      <h2>Income Details Page</h2>
+      <div>
+        <h2><%= income.incname %></h2>
+
+        <h2><span>Date:</span> <%= date %></h2>
+        <h2><span>Amount: </span><%= income.amount %></h2>
+        <div>
+          <a href="/income/<%= income.id %>/edit">Edit</a>
+          <a href="/income/<%= income.id %>/delete">Delete</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express and Incomes</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="header flex justify-between text-center flex-50">
+      <a href="/" class="">
+        <h2 class="text-white">Expense - Tracker</h2>
+      </a>
+
+      <div class="flex-50">
+        <% if(user) {%>
+        <div class="flex justify-between align-center">
+          <% if(user.photo.includes('http')){%>
+          <img src="<%= user.photo %> " class="profile-img imageHover" />
+          <div class="details">
+            <p>Name : <%=user.name %></p>
+            <p>Email : <%=user.email %></p>
+          </div>
+          <% }else{%>
+          <img
+            src="/uploads/<%=user.photo  %> "
+            alt="user Pic"
+            class="profile-img imageHover"
+          />
+          <div class="details">
+            <p>Name : <%=user.name %></p>
+            <p>Email : <%=user.email %></p>
+            <p>Age : <%=user.age %></p>
+            <p>Country : <%= user.country %></p>
+          </div>
+          <% } %>
+          <h2><%=user.name %></h2>
+          <a class="button-grow" href="/users/logout">Logout</a>
+        </div>
+        <% } else{ %>
+        <div class="flex">
+          <a href="/users/login">
+            <h2 class="button-grow">Login</h2>
+          </a>
+          <a href="/users/register/new">
+            <h2 class="button-grow">Register</h2>
+          </a>
+        </div>
+        <% } %>
+      </div>
+    </header>
+
+    <main></main>
+  </body>
+</html>

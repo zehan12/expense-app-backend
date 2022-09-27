@@ -1,0 +1,21 @@
+
+<% include partials/header %>
+
+<main class="flex justify-center items-center">
+  <div>
+    <h1 class="">Add Income</h1>
+    <section class="">
+      <form action="/client/income" method="POST">
+        <% if(info) { %>
+        <legend class="text-green-500 font-bold"><%= info %></legend>
+        <%} %>
+        <input type="text" placeholder="Income Name" name="incname" class="" />
+        <input type="text" placeholder="Source" name="sources" class="" />
+        <input type="number" placeholder="Amount" name="amount" class="" />
+        <input type="date" name="date" class="" />
+        <input type="submit" value="Add Income" class="submit" />
+        <a class="" href="/client/statementList"> View All Records </a>
+      </form>
+    </section>
+  </div>
+</main>

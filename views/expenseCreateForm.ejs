@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<main class="flex justify-center items-center">
+  <div>
+    <section class="rounded-lg">
+      <h1 class="">Add Expense</h1>
+      <form action="/client/expense" method="POST">
+        <% if(info) { %>
+        <legend class=""><%= info %></legend>
+        <% } %>
+        <input type="text" name="expname" placeholder="Enter Expense Name" />
+        <input type="text" placeholder="Category" name="category" />
+        <input type="number" placeholder="Amount" name="amount" />
+        <input type="date" name="date" />
+        <input type="submit" value="Add Expense" class="submit" />
+
+        <a class="" href="/client/statementList"> View All Records </a>
+      </form>
+    </section>
+  </div>
+</main>

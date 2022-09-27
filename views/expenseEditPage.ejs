@@ -1,0 +1,30 @@
+<% include partials/header %>
+<main class="justify-center">
+  <div class="">
+    <section class="">
+      <h3>Edit Expenses</h3>
+      <form action="/expense/<%= expense.id %>" method="POST">
+        <input
+          type="text"
+          name="expname"
+          placeholder="Enter Expense Name"
+          value="<%= expense.expname %>"
+        />
+        <input
+          type="text"
+          name="category"
+          placeholder="Enter the Expense Category"
+          value="<%= expense.category %>"
+        />
+        <input
+          type="number"
+          name="amount"
+          placeholder="Amount"
+          value="<%= expense.amount %>"
+        />
+        <input type="date" name="date" />
+        <input type="submit" value="Update Expense" class="submit" />
+      </form>
+    </section>
+  </div>
+</main>

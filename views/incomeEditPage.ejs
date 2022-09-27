@@ -1,0 +1,26 @@
+<% include partials/header %>
+<main class="flex justify-center">
+  <div class="">
+    <h3>Edit IncomePage</h3>
+    <section class="">
+      <form action="/income/<%= income.id %>" method="POST">
+        <input
+          type="text"
+          name="incname"
+          placeholder="Enter Income Name"
+          value="<%= income.incname %>"
+        />
+        <input
+          type="text"
+          name="sources"
+          placeholder="Enter the Income Source"
+          value="<%= income.sources %>"
+        />
+        <input type="number" name="amount" placeholder="Amount" " value="<%=
+        income.amount %>" />
+        <input type="date" name="date" />
+        <input type="submit" value="Update Income" class="submit" />
+      </form>
+    </section>
+  </div>
+</main>

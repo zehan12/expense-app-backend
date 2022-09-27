@@ -1,0 +1,28 @@
+<% include partials/header %> 
+    
+    <main>
+        <div class="container" >
+           
+            <div class="justify-between">
+                <h2 class="text-center user-name mg-t10" >Welcome <span><%= user.name %></span> </h2>
+                <div class="mg-t10 ">
+                    <a href="/client/income/new" class="button-grow">Add Incomes</a>
+                    <a href="/client/expense/new"  class="button-grow">Add Expenses</a>
+                    <a href="/client/statementList"  class="button-grow">View All Records</a>
+                </div>
+           
+            </div>
+            <div class="text-center profile-div">
+                
+                <% if(user.photo.includes('http')){%>
+                    <img class="user-profile" src="<%=user.photo  %> " alt="">
+                <%}else{%>
+                    <img class="user-profile" src="/uploads/<%=user.photo%> " alt="">
+                <%} %> 
+            </div>
+            
+        </div>
+    </main>
+
+</body>
+</html>

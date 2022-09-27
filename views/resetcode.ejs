@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<main class="justify-center">
+  <div>
+    <form action="/users/login/resetpassword/verify" method="POST">
+      <h2>Please Enter verification Code</h2>
+      <% if(error) {%>
+      <p><%=error %></p>
+      <% } %> <% if(info) { %>
+      <h3><%= info %></h3>
+      <% } %>
+
+      <input
+        type="password"
+        name="passcode"
+        placeholder="Enter your verification code"
+      />
+      <input type="submit" class="submit" />
+    </form>
+  </div>
+</main>
